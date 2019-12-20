@@ -27,13 +27,13 @@
         android:id="@+id/button_okay"
         android:layout_width="82dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="90dp"
         android:background="#F8BBD0"
         android:text="Okay"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_flames"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox_juju" />
@@ -55,8 +55,12 @@
 
     <CheckBox
         android:id="@+id/checkBox_juju"
-        android:layout_width="74dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="65dp"
         android:text="Juju"
         android:textAlignment="center"
@@ -64,9 +68,21 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button_okay"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox_momo"
+        app:layout_constraintStart_toStartOf="@+id/checkBox_momo"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_momo" />
+
+    <Button
+        android:id="@+id/button_flames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="162dp"
+        android:background="#F8BBD0"
+        android:text="FLAMES"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_momo" />
+        app:layout_constraintTop_toBottomOf="@+id/button_okay" />
     "
     tools:layout_editor_absoluteX="157dp"
     tools:layout_editor_absoluteY="304dp" />
