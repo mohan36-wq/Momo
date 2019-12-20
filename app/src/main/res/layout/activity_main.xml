@@ -16,13 +16,13 @@
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_momo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_okay"
         android:layout_width="82dp"
         android:layout_height="0dp"
         android:layout_marginBottom="300dp"
@@ -32,10 +32,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_juju" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBox_momo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
@@ -43,13 +43,13 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox_juju"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBox_juju"
         android:layout_width="74dp"
         android:layout_height="0dp"
         android:layout_marginBottom="65dp"
@@ -57,10 +57,10 @@
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/button_okay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_momo" />
     "
     tools:layout_editor_absoluteX="157dp"
     tools:layout_editor_absoluteY="304dp" />
