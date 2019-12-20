@@ -9,11 +9,59 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="215dp"
-        android:layout_height="35dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="153dp"
+        android:layout_marginBottom="49dp"
         android:text="Who are you?"
         android:textAlignment="center"
         android:textSize="25sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="82dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="300dp"
+        android:text="Okay"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:text="Momo"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checkBox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="74dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="65dp"
+        android:text="Juju"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+    "
+    tools:layout_editor_absoluteX="157dp"
+    tools:layout_editor_absoluteY="304dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
