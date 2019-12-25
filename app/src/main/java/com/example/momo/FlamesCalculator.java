@@ -2,14 +2,23 @@ package com.example.momo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
+import java.util.concurrent.TimeUnit;
 
 public class FlamesCalculator extends AppCompatActivity {
 
     ImageView iv_f, iv_l, iv_a, iv_m, iv_e, iv_s;
-
+    Button bt_calculator, bt_back;
+    EditText edCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,48 +31,290 @@ public class FlamesCalculator extends AppCompatActivity {
         iv_e = findViewById(R.id.imageView_e);
         iv_s = findViewById(R.id.imageView_s);
 
-        int count = 1;
+        bt_calculator = findViewById(R.id.button_calculate);
+        bt_back = findViewById(R.id.button);
+        edCount = findViewById(R.id.editText3);
 
-        switch (count) {
-            case 1:
-                iv_f.setVisibility(View.VISIBLE);
-        }
-    }
+        bt_calculator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                int count = 0;
 
-   /* class flames
-    {
-        public static void main(String args[])
-        {
-            int i,j,k=0;
-            String s1=new String("madhumitha"),s2=new String("sairam"),s3=new String(),s4=new String();
-            for(i=0;i<s1.length()-1;i++)
-            {
-                for(j=0;j<=s2.length()-1;j++)
-                {
-                    //System.out.println("Madhu: "+s1.charAt(i));
-                    //System.out.println("Sai: "+s2.charAt(j));
-                    if(s1.charAt(i)==s2.charAt(j))
-                    {
-                        //char ch1=s3.charAt(k);
-                        //System.out.println("Chumma: "+ch1);
-                        //char ch2=s1.charAt(i);
-                        //System.out.println("Rep let: "+ch2);
-//s3.charAt(k)=s1.charAt(i);
-//s3.replace(s3.charAt(k),s1.charAt(i));
-                        s3=s3+s1.charAt(i);
-//System.out.println("After rep: "+s3.charAt(k));
-                        k++;
-                    }}}
-            System.out.println(s3);
-            for (i = 0; i < s3.length(); i++) {
-                for (j = 0; j < i; j++)
-                    if (s3.charAt(i) == s3.charAt(j))
+                count = Integer.parseInt(edCount.getText().toString());
+
+                switch (count) {
+                        case 0:
+                            Toast.makeText(FlamesCalculator.this, "Not Compatible", Toast.LENGTH_SHORT).show();
                         break;
-                if (j == i)
-                    s4=s4+s3.charAt(i);
+                            case 1:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_f.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_l.setVisibility(View.INVISIBLE);
+                            }
+                        }, 3000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_a.setVisibility(View.INVISIBLE);
+                            }
+                        }, 5000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_m.setVisibility(View.INVISIBLE);
+                            }
+                        }, 7000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_e.setVisibility(View.INVISIBLE);
+                            }
+                        }, 9000);
+                        break;
+
+                        case 2:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_l.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_m.setVisibility(View.INVISIBLE);
+                            }
+                        }, 3000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_s.setVisibility(View.INVISIBLE);
+                            }
+                        }, 5000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_a.setVisibility(View.INVISIBLE);
+                            }
+                        }, 7000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_f.setVisibility(View.INVISIBLE);
+                            }
+                        }, 9000);
+                        break;
+
+                        case 3:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_a.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_s.setVisibility(View.INVISIBLE);
+                            }
+                        }, 3000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_m.setVisibility(View.INVISIBLE);
+                            }
+                        }, 5000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_l.setVisibility(View.INVISIBLE);
+                            }
+                        }, 7000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_e.setVisibility(View.INVISIBLE);
+                            }
+                        }, 9000);
+                        break;
+
+                        case 4:
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_m.setVisibility(View.INVISIBLE);
+                                }
+                            }, 1000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_l.setVisibility(View.INVISIBLE);
+                                }
+                            }, 3000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_f.setVisibility(View.INVISIBLE);
+                                }
+                            }, 5000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_a.setVisibility(View.INVISIBLE);
+                                }
+                            }, 7000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_s.setVisibility(View.INVISIBLE);
+                                }
+                            }, 9000);
+                        break;
+
+                        case 5:
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_e.setVisibility(View.INVISIBLE);
+                                }
+                            }, 1000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_m.setVisibility(View.INVISIBLE);
+                                }
+                            }, 3000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_s.setVisibility(View.INVISIBLE);
+                                }
+                            }, 5000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_l.setVisibility(View.INVISIBLE);
+                                }
+                            }, 7000);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    iv_f.setVisibility(View.INVISIBLE);
+                                }
+                            }, 9000);
+                            break;
+                        case 6:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_s.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_f.setVisibility(View.INVISIBLE);
+                            }
+                        }, 3000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_a.setVisibility(View.INVISIBLE);
+                            }
+                        }, 5000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_l.setVisibility(View.INVISIBLE);
+                            }
+                        }, 7000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_e.setVisibility(View.INVISIBLE);
+                            }
+                        }, 9000);
+                        break;
+                    case 7:
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_f.setVisibility(View.INVISIBLE);
+                            }
+                        }, 1000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_a.setVisibility(View.INVISIBLE);
+                            }
+                        }, 3000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_s.setVisibility(View.INVISIBLE);
+                            }
+                        }, 5000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_l.setVisibility(View.INVISIBLE);
+                            }
+                        }, 7000);
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                iv_m.setVisibility(View.INVISIBLE);
+                            }
+                        }, 9000);
+                        break;
+                }
             }
-            System.out.println(s4);
-        }
-    }*/
+
+            });
+
+        bt_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FlamesCalculator.this, FlamesActivity.class));
+            }
+        });
+
+
+    }
 }
