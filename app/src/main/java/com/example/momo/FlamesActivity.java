@@ -12,7 +12,7 @@ public class FlamesActivity extends AppCompatActivity {
 
     TextView flames;
     EditText name1,name2;
-    String s1,s2,s3,s4,s5=new String("FLAMES");
+    String s1,s2,s3,s4,s5 =new String("FLAMES");
     Button go;
 
     @Override
