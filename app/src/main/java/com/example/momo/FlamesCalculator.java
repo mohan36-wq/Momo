@@ -29,4 +29,41 @@ public class FlamesCalculator extends AppCompatActivity {
                 iv_f.setVisibility(View.VISIBLE);
         }
     }
+
+
+   /* class flames
+    {
+        public static void main(String args[])
+        {
+            int i,j,k=0;
+            String s1=new String("madhumitha"),s2=new String("sairam"),s3=new String(),s4=new String();
+            for(i=0;i<s1.length()-1;i++)
+            {
+                for(j=0;j<=s2.length()-1;j++)
+                {
+                    //System.out.println("Madhu: "+s1.charAt(i));
+                    //System.out.println("Sai: "+s2.charAt(j));
+                    if(s1.charAt(i)==s2.charAt(j))
+                    {
+                        //char ch1=s3.charAt(k);
+                        //System.out.println("Chumma: "+ch1);
+                        //char ch2=s1.charAt(i);
+                        //System.out.println("Rep let: "+ch2);
+//s3.charAt(k)=s1.charAt(i);
+//s3.replace(s3.charAt(k),s1.charAt(i));
+                        s3=s3+s1.charAt(i);
+//System.out.println("After rep: "+s3.charAt(k));
+                        k++;
+                    }}}
+            System.out.println(s3);
+            for (i = 0; i < s3.length(); i++) {
+                for (j = 0; j < i; j++)
+                    if (s3.charAt(i) == s3.charAt(j))
+                        break;
+                if (j == i)
+                    s4=s4+s3.charAt(i);
+            }
+            System.out.println(s4);
+        }
+    }*/
 }
