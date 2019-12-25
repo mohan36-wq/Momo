@@ -26,7 +26,7 @@ public class FlamesActivity extends AppCompatActivity {
         flames = findViewById(R.id.textView);
         name1 = findViewById(R.id.editText);
         name2 = findViewById(R.id.editText2);
-        go = findViewById(R.id.button);
+        go = findViewById(R.id.button_go);
 
         go.setOnClickListener(new View.OnClickListener() {
             @Override
