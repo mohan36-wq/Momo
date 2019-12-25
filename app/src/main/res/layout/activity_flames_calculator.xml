@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgflames"
+    tools:context=".FlamesCalculator">
+
+    <ImageView
+        android:id="@+id/imageView_s"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_e"
+        app:layout_constraintTop_toTopOf="@+id/imageView_e"
+        app:srcCompat="@drawable/s" />
+
+    <ImageView
+        android:id="@+id/imageView_f"
+        android:layout_width="56dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_l"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_l"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView_l"
+        app:srcCompat="@drawable/f" />
+
+    <ImageView
+        android:id="@+id/imageView_l"
+        android:layout_width="55dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_m"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_a"
+        app:layout_constraintStart_toEndOf="@+id/imageView_f"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/l" />
+
+    <ImageView
+        android:id="@+id/imageView_a"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_l"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_m"
+        app:layout_constraintStart_toEndOf="@+id/imageView_l"
+        app:layout_constraintTop_toTopOf="@+id/imageView_l"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/a" />
+
+    <ImageView
+        android:id="@+id/imageView_m"
+        android:layout_width="78dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="163dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_e"
+        app:layout_constraintStart_toEndOf="@+id/imageView_a"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_l"
+        app:srcCompat="@drawable/m" />
+
+    <ImageView
+        android:id="@+id/imageView_e"
+        android:layout_width="40dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="163dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_s"
+        app:layout_constraintStart_toEndOf="@+id/imageView_m"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/e" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="205dp"
+        android:layout_height="65dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_m" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
