@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.concurrent.TimeUnit;
@@ -18,7 +19,7 @@ public class FlamesCalculator extends AppCompatActivity {
 
     ImageView iv_f, iv_l, iv_a, iv_m, iv_e, iv_s;
     Button bt_calculator, bt_back;
-    EditText edCount;
+    TextView edCount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,15 +34,18 @@ public class FlamesCalculator extends AppCompatActivity {
 
         bt_calculator = findViewById(R.id.button_calculate);
         bt_back = findViewById(R.id.button);
-        edCount = findViewById(R.id.editText3);
+       edCount = findViewById(R.id.textView2);
 
         bt_calculator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                int count = 0;
+               // int count = 0;
+                Intent getintent=getIntent();
+                int count= getintent.getIntExtra("Count val",0);
+                edCount.setText(String.valueOf(count));
 
-                count = Integer.parseInt(edCount.getText().toString());
+                //count = Integer.parseInt(edCount.getText().toString());
 
                 switch (count) {
                         case 0:
