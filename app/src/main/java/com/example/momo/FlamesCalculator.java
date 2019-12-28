@@ -13,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.concurrent.TimeUnit;
-
 public class FlamesCalculator extends AppCompatActivity {
 
     ImageView iv_f, iv_l, iv_a, iv_m, iv_e, iv_s;
@@ -40,306 +38,88 @@ public class FlamesCalculator extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               // int count = 0;
                 Intent getintent=getIntent();
                 int count= getintent.getIntExtra("Count val",0);
                 edCount.setText(String.valueOf(count));
 
-                //count = Integer.parseInt(edCount.getText().toString());
-
-                switch (count) {
-                        case 0:
-                            Toast.makeText(FlamesCalculator.this, "Not Compatible", Toast.LENGTH_SHORT).show();
-                        break;
-                            case 1:
-                        new Handler().postDelayed(new Runnable() {
+                int i,j,n,time = 1000;
+                String s = new String("FLAMES");
+                String s1;
+                for(i=count-1,n=6;n!=1;i+=(count-1))
+                {
+                    if(i>=n)
+                        i%=n;
+                    if(i<n)
+                    {
+                        s1 = ((Character)s.charAt(i)).toString();
+                        s=s.replace(s1,"");
+                        switch (s1) {
+                            case "F":
+                                new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 iv_f.setVisibility(View.INVISIBLE);
                             }
-                        }, 1000);
+                        }, time);
+                        break;
 
+                            case "L":
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 iv_l.setVisibility(View.INVISIBLE);
                             }
-                        }, 3000);
+                        }, time);
+                        break;
 
+                            case "A":
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 iv_a.setVisibility(View.INVISIBLE);
                             }
-                        }, 5000);
+                        }, time);
+                        break;
 
+                            case "M":
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 iv_m.setVisibility(View.INVISIBLE);
                             }
-                        }, 7000);
+                        }, time);
+                        break;
 
+                            case "E":
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 iv_e.setVisibility(View.INVISIBLE);
                             }
-                        }, 9000);
+                        }, time);
                         break;
 
-                        case 2:
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_l.setVisibility(View.INVISIBLE);
-                            }
-                        }, 1000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_m.setVisibility(View.INVISIBLE);
-                            }
-                        }, 3000);
-
+                            case "S":
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
                                 iv_s.setVisibility(View.INVISIBLE);
                             }
-                        }, 5000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_a.setVisibility(View.INVISIBLE);
-                            }
-                        }, 7000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_f.setVisibility(View.INVISIBLE);
-                            }
-                        }, 9000);
+                        }, time);
                         break;
-
-                        case 3:
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_a.setVisibility(View.INVISIBLE);
-                            }
-                        }, 1000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_s.setVisibility(View.INVISIBLE);
-                            }
-                        }, 3000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_m.setVisibility(View.INVISIBLE);
-                            }
-                        }, 5000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_l.setVisibility(View.INVISIBLE);
-                            }
-                        }, 7000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_e.setVisibility(View.INVISIBLE);
-                            }
-                        }, 9000);
-                        break;
-
-                        case 4:
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_m.setVisibility(View.INVISIBLE);
-                                }
-                            }, 1000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_l.setVisibility(View.INVISIBLE);
-                                }
-                            }, 3000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_f.setVisibility(View.INVISIBLE);
-                                }
-                            }, 5000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_a.setVisibility(View.INVISIBLE);
-                                }
-                            }, 7000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_s.setVisibility(View.INVISIBLE);
-                                }
-                            }, 9000);
-                        break;
-
-                        case 5:
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_e.setVisibility(View.INVISIBLE);
-                                }
-                            }, 1000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_m.setVisibility(View.INVISIBLE);
-                                }
-                            }, 3000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_s.setVisibility(View.INVISIBLE);
-                                }
-                            }, 5000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_l.setVisibility(View.INVISIBLE);
-                                }
-                            }, 7000);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    iv_f.setVisibility(View.INVISIBLE);
-                                }
-                            }, 9000);
-                            break;
-                        case 6:
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_s.setVisibility(View.INVISIBLE);
-                            }
-                        }, 1000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_f.setVisibility(View.INVISIBLE);
-                            }
-                        }, 3000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_a.setVisibility(View.INVISIBLE);
-                            }
-                        }, 5000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_l.setVisibility(View.INVISIBLE);
-                            }
-                        }, 7000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_e.setVisibility(View.INVISIBLE);
-                            }
-                        }, 9000);
-                        break;
-                    case 7:
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_f.setVisibility(View.INVISIBLE);
-                            }
-                        }, 1000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_a.setVisibility(View.INVISIBLE);
-                            }
-                        }, 3000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_s.setVisibility(View.INVISIBLE);
-                            }
-                        }, 5000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_l.setVisibility(View.INVISIBLE);
-                            }
-                        }, 7000);
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                iv_m.setVisibility(View.INVISIBLE);
-                            }
-                        }, 9000);
-                        break;
+                        }
+                    }
+                    n--;
+                    time+=1000;
                 }
             }
-
             });
 
         bt_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(FlamesCalculator.this, FlamesActivity.class));
-                Intent getintent=getIntent();
-                int countval= getintent.getIntExtra("Count val",0);
-                int i,j,n;
-                String s=new String("FLAMES");
-                String s1;
-                for(i=countval-1,n=6;n!=1;i+=(countval-1))
-                {
-                    //System.out.println("i: "+i);
-                    if(i>n)
-                        i%=n;
-                    //System.out.println("i: "+i);
-                    if(i<=n)
-                    {
-                        s1=new String(s.substring(i,i+1));
-                        //System.out.println("s1: "+s1);
-                        s=s.replace(s1,"");
-                    }
-                    n--;
-                    //System.out.println("n: "+n);
-                }
-                //System.out.println(s);
             }
         });
-
-
     }
 }

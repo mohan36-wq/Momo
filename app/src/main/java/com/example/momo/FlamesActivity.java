@@ -39,7 +39,7 @@ public class FlamesActivity extends AppCompatActivity {
                 s2 = name2.getText().toString();
                 s1.toLowerCase();
                 s2.toLowerCase();
-                for (i = 0; i < s1.length() - 1; i++)
+                for (i = 0; i <= s1.length() - 1; i++)
                     for (j = 0; j <= s2.length() - 1; j++)
                         if (s1.charAt(i) == s2.charAt(j)) {
                             s3 = s3 + s1.charAt(i);
