@@ -312,6 +312,27 @@ public class FlamesCalculator extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(FlamesCalculator.this, FlamesActivity.class));
+                Intent getintent=getIntent();
+                int countval= getintent.getIntExtra("Count val",0);
+                int i,j,n;
+                String s=new String("FLAMES");
+                String s1;
+                for(i=countval-1,n=6;n!=1;i+=(countval-1))
+                {
+                    //System.out.println("i: "+i);
+                    if(i>n)
+                        i%=n;
+                    //System.out.println("i: "+i);
+                    if(i<=n)
+                    {
+                        s1=new String(s.substring(i,i+1));
+                        //System.out.println("s1: "+s1);
+                        s=s.replace(s1,"");
+                    }
+                    n--;
+                    //System.out.println("n: "+n);
+                }
+                //System.out.println(s);
             }
         });
 
